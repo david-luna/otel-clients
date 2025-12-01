@@ -8,7 +8,7 @@ export function getResource(attribs) {
     return defaultResource()
         .merge(resourceFromAttributes(attribs))
         .merge(resourceFromAttributes({
-            ['user_aget.original']: navigator.userAgent,
+            ['user_agent.original']: navigator.userAgent,
             //https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#mobile_tablet_or_desktop
             ['bowser.mobile']: navigator.userAgent.includes('Mobi'),
             ['browser.touch_screen_enabled']: navigator.maxTouchPoints > 0,

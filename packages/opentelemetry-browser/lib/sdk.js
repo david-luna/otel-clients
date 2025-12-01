@@ -1,6 +1,6 @@
 import { diag } from '@opentelemetry/api';
 import { registerInstrumentations } from '@opentelemetry/instrumentation';
-import { resourceFromAttributes, defaultResource } from '@opentelemetry/resources';
+import { resourceFromAttributes } from '@opentelemetry/resources';
 import { WebTracerProvider } from '@opentelemetry/sdk-trace-web';
 import { getContextManager } from './context.js';
 import { getInstrumentations } from './instrumentations.js';

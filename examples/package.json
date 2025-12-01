@@ -8,6 +8,8 @@
     "start:collector": "cd server && npm run start:collector",
     "start:react-native:android": "cd react-native && npm run android",
     "start:react-native:ios": "cd react-native && npm run ios",
-    "start:react-web": "cd react-web && npm run dev"
+    "start:react-web": "cd react-web && npm run dev",
+    "start:proxy": "docker run --name otel-nginx -p 7003:80 -v ./proxy/nginx.conf:/etc/nginx/nginx.conf:ro nginx",
+    "kill:proxy": "docker rm --force otel-nginx"
   }
 }

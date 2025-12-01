@@ -9,7 +9,7 @@ export const Item = memo(function Item({ todo, dispatch, index }) {
     const [isWritable, setIsWritable] = useState(false);
     const { title, completed, id } = todo;
 
-    const toggleItem = useCallback(() => dispatch({ type: TOGGLE_ITEM, payload: { id } }), [dispatch]);
+    const toggleItem = useCallback(() => dispatch({ type: TOGGLE_ITEM, payload: { id, title, completed } }), [dispatch]);
     const removeItem = useCallback(() => dispatch({ type: REMOVE_ITEM, payload: { id } }), [dispatch]);
     const updateItem = useCallback((id, title) => dispatch({ type: UPDATE_ITEM, payload: { id, title } }), [dispatch]);
 
